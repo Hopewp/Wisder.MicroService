@@ -1,0 +1,9 @@
+{
+  //"RegistryAddress": "http://127.0.0.1:8500",
+  "ServiceName": "IdentityServer",
+  "ServiceTags": null,
+  "ServiceScheme": "http",
+  //"ServiceAddress": "172.17.0.8",
+  "ServicePort": "80",
+  "HealthCheck": "/healthy"
+}

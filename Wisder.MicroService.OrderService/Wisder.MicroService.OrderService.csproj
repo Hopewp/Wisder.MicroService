@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>E:\Wisder.MicroService\Wisder.MicroService.OrderService\Wisder.MicroService.OrderService.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wisder.MicroService.Common\Wisder.MicroService.Common.csproj" />
+    <ProjectReference Include="..\Wisder.MicroService.Core\Wisder.MicroService.Core.csproj" />
+    <ProjectReference Include="..\Wisder.MicroService.OrderService.Entitys\Wisder.MicroService.OrderService.Entitys.csproj" />
+  </ItemGroup>
+
+
+</Project>

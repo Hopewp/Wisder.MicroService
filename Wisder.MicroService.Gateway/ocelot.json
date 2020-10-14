@@ -1,0 +1,40 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/{apipath}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/order/{apipath}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "ServiceName": "OrderService",
+      "RouteIsCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 5,
+        "DurationOfBreak": 2000,
+        "TimeoutValue": 5000
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 2000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "OrderServiceKey",
+        "AllowedScopes": []
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Scheme": "http",
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "PollConsul",
+      "PollingInterval": 1000
+    }
+  }
+}

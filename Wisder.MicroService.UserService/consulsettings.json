@@ -1,0 +1,9 @@
+{
+  //"RegistryAddress": "http://172.17.0.3:8500",
+  "ServiceName": "UserService",
+  "ServiceTags": null,
+  "ServiceScheme": "http",
+  //"ServiceAddress": "172.17.0.4",
+  "ServicePort": "80",
+  "HealthCheck": "/healthy"
+}
